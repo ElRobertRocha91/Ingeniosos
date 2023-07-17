@@ -3,12 +3,12 @@ const { Schema, model } = require("mongoose");
 const teacherSchema = new Schema({
     name: {
         type: String,
-        require: true,
+        required: true,
         unique: true
     },
     surname: {
         type: String,
-        require: true,
+        required: true,
         unique: true
     },
     faculty: {
