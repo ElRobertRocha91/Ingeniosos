@@ -9,6 +9,9 @@ const facultySchema = new Schema({
             },
             message: "The name must contain only letter and spaces, with a minimum length of 4 and a maximum of 255 characters"
         }
+    },
+    description: {
+        type: String,
     }
 })
 
