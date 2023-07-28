@@ -4,9 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
+import { teacherApiSlice } from './features/teacherApiSlice.js';
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    [teacherApiSlice.reducer]: teacherApiSlice.reducer,
+  },
+  middleware: (getDefaultMiddleware) => 
+  getDefaultMiddleware().concat(teacherApiSlice.middleware),
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
