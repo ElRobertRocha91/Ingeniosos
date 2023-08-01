@@ -4,20 +4,22 @@ import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { teacherApiSlice } from './features/teacherApiSlice.js';
+import { HashRouter } from 'react-router-dom';
 
 const store = configureStore({
   reducer: {
-    [teacherApiSlice.reducer]: teacherApiSlice.reducer,
+    [teacherApi.reducer]: teacherApi.reducer,
   },
   middleware: (getDefaultMiddleware) => 
-  getDefaultMiddleware().concat(teacherApiSlice.middleware),
+  getDefaultMiddleware().concat(teacherApi.middleware),
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <HashRouter>
+        <App />
+      </HashRouter>
     </Provider>
   </React.StrictMode>,
 )
