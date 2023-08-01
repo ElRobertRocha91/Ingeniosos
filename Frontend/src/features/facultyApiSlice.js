@@ -1,9 +1,9 @@
-import { createSlice, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const facultyApiSlice = createSlice({
+export const facultyApi = createApi({
     reducerPath: 'facultyApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:3000',
+        baseUrl: 'http://localhost:3001',
     }),
     endpoints: (builder) => ({
         getFaculty: builder.query({
@@ -12,4 +12,4 @@ export const facultyApiSlice = createSlice({
     }),
 });
 
-export const { useGetFacultyQuery } = facultyApiSlice;
+export const { useGetFacultyQuery } = facultyApi;
