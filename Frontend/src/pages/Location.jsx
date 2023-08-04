@@ -1,9 +1,15 @@
 import React from "react";
+import NavBar from "../components/NavBar/NavBar";
 
 function Location () {
 
     return (
-        <div>Location</div>
+        <div>
+            <NavBar/>
+            <div>
+                <h2>Location</h2>
+            </div>
+        </div>
     )
 }
 
