@@ -5,6 +5,7 @@ import './index.css'
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { HashRouter } from 'react-router-dom';
+import { teacherApi } from './features/teacherApiSlice';
 
 const store = configureStore({
   reducer: {
